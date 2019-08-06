@@ -1,0 +1,59 @@
+.login-content{
+    width: 100%;
+    /* position: relative; */
+    /* top: -55px; */
+    margin: 80px auto;
+    font-family: Noto Sans SC,SourceHanSansCN-Normal,PingFang SC,Heiti SC,Microsoft YaHei UI,Microsoft YaHei,sans-serif;
+}
+.login-form{
+    width: 400px;
+    margin: 0 auto;
+    text-align: left;        
+}
+.login-form>p{
+    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 16px;
+}
+.el-input{
+    margin-bottom: 40px;
+    border-radius: 2px;
+    line-height: 50px;
+    height: 50px;
+}
+.captcha{
+    display: flex;
+}
+.el-input__inner{
+    border-radius: 2px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    width: 100% !important;
+}
+.el-input__inner:focus{
+    border-color:#DCDFE6 !important;
+    box-shadow: 0px 0px 8px #00081cfd
+}
+/*验证码按钮样式*/
+.el-button,.el-button.is-plain:focus, .el-button.is-plain:hover,.el-button.is-plain:active{
+    border: 1px solid #ddd !important;
+    color: #00081c !important;
+    border-radius: 2px;
+    height: 50px;
+}
+/* 登录按钮 */
+.login{
+    width: 100%;
+    background-color: #00081c !important;
+    color: #cdbc7a !important;
+    border: 1px solid #cdbc7a !important;
+    height: 50px !important;
+    border-radius: 0 !important;
+}
+/*  */
+.go-vip{
+    float:right;
+    margin: 10px;
+    color: #00081c !important;
+    font-size: 13px;
+}
