@@ -1,12 +1,13 @@
 <template>
   <div id="app">
       
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
       <router-link to="/login">login</router-link>
       <router-link to='/register'>register</router-link>
-    </div>
+      
+    </div> -->
     <!-- //路由出口 -->
     <router-view/>
   </div>

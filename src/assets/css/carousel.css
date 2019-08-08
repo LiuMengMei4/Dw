@@ -1,0 +1,42 @@
+.box{
+    /* overflow: hidden; */
+    width: 100%;
+}
+/*卡片样式 */
+.el-card__body{
+    padding: 0;
+    /* display: inline-block; */
+}
+.el-card.is-always-shadow{
+    box-shadow: none;
+}
+.el-card:hover{
+    box-shadow: none;
+}
+.box-card{
+    text-align: center;
+    border: 0;
+}
+.box-card,p>img{
+    width: 340px;
+}
+p{
+    cursor: pointer;
+    margin: 7px 0;
+    font-size: 14px;
+}
+a{
+    display: block;
+}
+.el-button{
+border: 1px solid #00081c !important;
+color: #606266;
+-webkit-transition: .1s;
+transition: .1s;
+padding: 13px 32px;
+border-radius: 2px;
+height: 40px;
+}
+.el-button:focus, .el-button:hover{
+    background-color: #fff;
+}

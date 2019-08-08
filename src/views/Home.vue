@@ -1,18 +1,16 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <homecar></homecar>
   </div>
 </template>
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-import Login from '@/views/Login.vue'
+import Home_car from '../components/Home_car'
 export default {
   name: 'home',
   //注册子组件
   components: {
-    HelloWorld,
-    Login
+      'homecar':Home_car
   }
   
 }
