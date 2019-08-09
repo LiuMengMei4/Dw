@@ -51,4 +51,7 @@ export default {
     .footer-menu li:last-child{
         border: none;
     }
+    a{
+        display:inline-block;
+    }
 </style>

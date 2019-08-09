@@ -1,4 +1,5 @@
 <template>
+<div>
 <!-- 最外层width100% -->
     <div class="section_footer">
         <!-- width:1170px -->
@@ -87,8 +88,12 @@
             </el-row>
         </div>
     </div>
+    <myhead></myhead>
+    </div>
 </template>
 <script>
+// import Header from '../components/Header_nav'
+import Header from '../components/Footer_l.vue'
 export default{
     data(){
         return{
@@ -100,6 +105,9 @@ export default{
             this.isShow=!this.isShow
         }
     },
+    components:{
+        'myhead':Header
+    }
 }
 </script>
 <style scoped>
