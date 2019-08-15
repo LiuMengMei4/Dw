@@ -8,7 +8,7 @@ import NewsDetail from  './views/NewsDetail.vue'
 import BrandStory from './views/BrandStory.vue'
 
 // import Home_car from './components/Home_car.vue'
-// import Carousel from './components/Carousel1.vue'
+ import Carousel from './components/Carousel1.vue'
 // import Index_details from './components/Index_details.vue'
 // import News from './components/News.vue'
 
@@ -27,7 +27,7 @@ export default new Router({
     //  {path: '/about',name: 'about',component: () => import('./views/About.vue')},
     //  {path:'/news',name:'news',component:News},
     //  {path:'/homecar',name:'home_car',component:Home_car},
-    //  {path:'/carousel',name:'carousel',component:Carousel},
+    {path:'/carousel',name:'carousel',component:Carousel},
     //  {path:'/index_details',name:'index_details',component:Index_details},
 
   ],
