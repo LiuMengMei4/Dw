@@ -41,4 +41,4 @@ INSERT INTO  product VALUES
     (null,'CLASSIC PETITE',0,28/32/36,1289,'金属','b5b4b4','蛋壳白','30米生活放水',0,1,'日本石英机芯',6);
 
 #产品图片及描述
-CREATE TABLE product
+# CREATE TABLE product

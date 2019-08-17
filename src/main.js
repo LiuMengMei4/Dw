@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+// import './assets/font/fonts.css'
+
 
 // import './assets/css/carousel.css'
 //引入axios

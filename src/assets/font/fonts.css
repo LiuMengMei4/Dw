@@ -1,0 +1,19 @@
+@font-face{
+    font-family:"Adobe Caslon Pro";
+    src:url(./ACaslonPro-Regular.otf) format("opentype");
+    font-weight:400;font-style:normal}@font-face{font-family:"Adobe Caslon Pro Italic";
+    src:url(./ACaslonPro-Italic.otf) format("opentype");
+    font-weight:400;font-style:normal
+}
+@font-face{
+    font-family:"Futura Std";
+    src:url(./FuturaStd-Book.otf) format("opentype");
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:"Futura Std Light";
+    src:url(./FuturaStd-Light.otf) format("opentype");
+    font-weight:400;
+    font-style:normal
+}

@@ -1,8 +1,8 @@
 <template>
     <div class="carousel">
         <div class="carousel-content">
-            <div class="carousel-box" style="left:0px">
-                <div class="carousel-card">
+            <ul class="carousel-box" style="left:0px">
+                <li class="carousel-card">
                     <a href="https://element.eleme.cn/#/zh-CN/component/card">
                         <p>
                             <img src="../assets/img/lover/petite_mesh_watch_s_32_ashfield_black_petite_leather_strap_s_14_bondi_1.png" alt="">
@@ -12,8 +12,8 @@
                         <p>￥2131.00</p>
                     </a>
                     <el-button>点击购买</el-button>
-                </div>
-                <div class="carousel-card">
+                </li>
+                <li class="carousel-card">
                     <a href="https://element.eleme.cn/#/zh-CN/component/card">
                         <p>
                             <img src="../assets/img/lover/petite_mesh_watch_s_32_ashfield_black_petite_leather_strap_s_14_bondi_1.png" alt="">
@@ -23,8 +23,8 @@
                         <p>￥2131.00</p>
                     </a>
                     <el-button>点击购买</el-button>
-                </div>
-                <div class="carousel-card">
+                </li>
+                <li class="carousel-card">
                     <a href="https://element.eleme.cn/#/zh-CN/component/card">
                         <p>
                             <img src="../assets/img/lover/petite_mesh_watch_s_32_ashfield_black_petite_leather_strap_s_14_bondi_1.png" alt="">
@@ -34,8 +34,8 @@
                         <p>￥2131.00</p>
                     </a>
                     <el-button>点击购买</el-button>
-                </div>
-                <div class="carousel-card">
+                </li>
+                <li class="carousel-card">
                     <a href="https://element.eleme.cn/#/zh-CN/component/card">
                         <p>
                             <img src="../assets/img/lover/petite_mesh_watch_s_32_ashfield_black_petite_leather_strap_s_14_bondi_1.png" alt="">
@@ -45,8 +45,8 @@
                         <p>￥2131.00</p>
                     </a>
                     <el-button>点击购买</el-button>
-                </div>
-                <div class="carousel-card">
+                </li>
+                <li class="carousel-card">
                     <a href="https://element.eleme.cn/#/zh-CN/component/card">
                         <p>
                             <img src="../assets/img/lover/petite_mesh_watch_s_32_ashfield_black_petite_leather_strap_s_14_bondi_1.png" alt="">
@@ -56,8 +56,8 @@
                         <p>￥2131.00</p>
                     </a>
                     <el-button>点击购买</el-button>
-                </div>
-                <div class="carousel-card">
+                </li>
+                <li class="carousel-card">
                     <a href="https://element.eleme.cn/#/zh-CN/component/card">
                         <p>
                             <img src="../assets/img/lover/petite_mesh_watch_s_32_ashfield_black_petite_leather_strap_s_14_bondi_1.png" alt="">
@@ -67,8 +67,8 @@
                         <p>￥2131.00</p>
                     </a>
                     <el-button>点击购买</el-button>
-                </div>
-                <div class="carousel-card">
+                </li>
+                <li class="carousel-card">
                     <a href="https://element.eleme.cn/#/zh-CN/component/card">
                         <p>
                             <img src="../assets/img/lover/petite_mesh_watch_s_32_ashfield_black_petite_leather_strap_s_14_bondi_1.png" alt="">
@@ -78,8 +78,19 @@
                         <p>￥2131.00</p>
                     </a>
                     <el-button>点击购买</el-button>
-                </div>
-            </div>
+                </li>
+                <li class="carousel-card">
+                    <a href="https://element.eleme.cn/#/zh-CN/component/card">
+                        <p>
+                            <img src="../assets/img/lover/petite_mesh_watch_s_32_ashfield_black_petite_leather_strap_s_14_bondi_1.png" alt="">
+                        </p>
+                        <p>Classic <span>Canterbury</span></p>
+                        <p>40mm</p>
+                        <p>￥2131.00</p>
+                    </a>
+                    <el-button>点击购买</el-button>
+                </li>
+            </ul>
         </div>
         <!-- 切换 -->
         <div class="switch-btn">
@@ -98,13 +109,19 @@
     }
     .carousel-content{
         width: 100%;
-        height: 100%;
+        height: 353px;
+        position: relative;
         overflow: hidden;
     }
     .carousel-box{
-        width: 4000px;
+        list-style: none;
         height: 100%;
-        position: relative;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+    }
+    .carousel-box li{
+        float: left;
     }
 /* 切换按钮 */
     .switch-btn{
@@ -161,51 +178,52 @@
 export default {
     data(){
         return{
-
-            }
-    },
+            carouselListsWidth:0,
+            target:0,
+            leader:0,
+            carouselBox:{},
+            carouselLists:{},
+            carouselList:{},
+            // timer,
+        }   
+   },
     computed:{
         },
     mounted(){           
-            // 获取所有的子元素的数量
-            let carouselBox=document.getElementsByClassName('carousel-card');
-            let cBoxChild=carouselBox.length;
-            console.log(carouselBox)
-
-            // let carouselBoxChildCount=carouselBox[0].childElementCount;
-            // let carouselBoxWidth=document.querySelector('.carousel-box');
-            // carouselBoxChildCount=6000+'px'
-            
-            // let carouselBoxChildCount=carouselBoxChild[0].childElementCount;
-            //  console.log(carouselBoxChildCount);
-
+        this.carouselBox=document.getElementsByClassName('carousel-content')
+        this.carouselLists=document.getElementsByTagName('ul')[0];
+        // console.log(carouselLists)
+        this.carouselList=carouselLists.getElementsByTagName('li');
+        // console.log(carouselList.offsetWidth)
+        // 获取所有的子元素的数量   
+        //动态设置ul宽度      li的数量   *  单个li的宽度                  
+        this.carouselListsWidth=carouselList.length*carouselList[0].offsetWidth;  
+        console.log(carouselListsWidth);
+        this.carouselLists=carouselList.length*carouselList[0].offsetWidth+'px';
+        // console.log(carouselLists);
+//         this.timer=window.setInterval(()=>{
+// //             if(target > 0 ) {
+// //                 target = 0
+// //             }
+// //             if(target <= -2080 ) {
+// //                     target = -2080
+// //             }
+// // //					拼接当前改变过的数据
+// //             leader = leader + (target - leader)/10;
+// // 						//
+// //             ulBox.style.left = leader + "px";
+//         },10)
     },
-        // var left=document.getElementsByClassName('el-icon-arrow-left'),
-    methods:{
+    methods:{            
         /*左移*/
         marinLeft(){
-            let carouselBoxLength=document.getElementsByClassName('carousel-box')
-            // console.log()
-            // let carouselChildCount=carouselBoxLength[0].childElementCount;
-            let beginLeft = parseInt(document.querySelector('.carousel-box').style.left);
-                // console.log(beginLeft)
-            if(this.cBoxChild>0){
-                this.cBoxChild--;
-                beginLeft-=345;
-                this.animate(beginLeft);
-            }
+            this.target+=this.carouselList[0].offsetWidth;
         },
         /*右移*/
         marinRight(){
-            let beginLeft = parseInt(document.querySelector('.carousel-box').style.left);
-            if(this.cBoxChild<7){
-                this.cBoxChild++;
-                beginLeft+=345;
-                console.log(beginLeft)
-                this.animate(beginLeft)
-            }
-            
+            this.target-=this.carouselList[0].offsetWidth;
         },
+        
         /*动画 */
         animate(beginLeft){
             let _this=this
