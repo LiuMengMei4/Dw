@@ -142,7 +142,7 @@
 
 </style>
 <script>
-    import Header from '../components/Header_nav'
+    import Header from '../components/Header_transparent'
     import Footer from '../components/Section_footer'
     export default {
         data(){

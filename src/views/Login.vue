@@ -13,11 +13,11 @@
             <el-button class="login">登录</el-button>
             <h6 class="go-vip">
                 <span>还不是会员？</span>
-                <a href="">立即注册</a>
+                <router-link :to="{path:'/register'}">立即注册</router-link>
             </h6>
         </div>
     </div>
-    <sectionfooter></sectionfooter>
+    <!-- <sectionfooter></sectionfooter> -->
     <myfooter></myfooter>
 </div>
 </template>
@@ -25,7 +25,7 @@
 /*页面模块*/
 import Header from '../components/Header'
 import Footer_l from '../components/Footer_l'
-import Section_footer from '../components/Section_footer'
+// import Section_footer from '../components/Section_footer'
 export default {
     name:'login',
     data(){
@@ -41,7 +41,6 @@ export default {
     components:{
         'myhead':Header,
         'myfooter':Footer_l,
-        'sectionfooter':Section_footer
     },
 
 }

@@ -24,7 +24,7 @@
             <el-button class="login">即刻加入</el-button>
             <h6 class="go-vip">
                 <span>已经是会员？</span>
-                <a href="">立即登录</a>
+                <router-link :to="{path:'/login'}">立即登录</router-link>
             </h6>
         </div>
     </div>

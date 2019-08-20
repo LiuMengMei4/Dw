@@ -39,7 +39,7 @@
     border: 1px solid #ddd !important;
     color: #00081c !important;
     border-radius: 2px;
-    height: 50px;
+    height: 50px !important;
 }
 /* 登录按钮 */
 .login{

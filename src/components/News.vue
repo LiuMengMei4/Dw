@@ -4,12 +4,6 @@
         <el-row class="row-box ">
             <el-col :span="24">
                 <div class="grid-content bg-purple-dark news-head">
-                    <!-- <el-col :xs="24" :sm="12"  class="news-head-introduce title-box  md-none-title">
-                            <p>
-                            <span class="time">2019年8月1日</span>
-                            <a href="" class="title border-style">时差恋人，时刻爱</a>
-                            </p>
-                    </el-col> -->
                     <div class="news-head">
                         <el-col :xs="24" :sm="12"  class="news-head-introduce md-block-title">
                             <p>
